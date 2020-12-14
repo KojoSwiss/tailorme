@@ -6,10 +6,12 @@
       <div class="card-product">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos">
-          <h2><%= tailor.shop_name %></h2>
+          <h2><strong><%= tailor.shop_name %></strong></h2>
+          <p><%= tailor.id %></p>
           <p><%= truncate(tailor.description, length:50) %></p>
           <p><%= tailor.rating %></p>
           <p> <%= tailor.review %></p>
+          <%= link_to 'more', tailor %>
         </div>
       </div>
       <% end %>
