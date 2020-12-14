@@ -1,1 +1,19 @@
 <h1>Index Page</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <% @tailors.each do |tailor| %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2><%= tailor.shop_name %></h2>
+          <p><%= truncate(tailor.description, length:50) %></p>
+          <p><%= tailor.rating %></p>
+          <p> <%= tailor.review %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

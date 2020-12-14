@@ -11,7 +11,7 @@ puts 'DB is clean, Seeding tailors...'
     shop_name: Faker::Ancient.hero,
     description: Faker::Restaurant.description,
     review: Faker::Restaurant.review,
-    rating:  rand(0..5),
+    rating:  rand(1..5),
     city: Faker::Address.city
     )
   puts "#{tailor.shop_name} done"
