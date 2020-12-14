@@ -4,8 +4,7 @@ class CreateTailors < ActiveRecord::Migration[6.0]
       t.string :shop_name
       t.string :description
       t.string :review
-      t.string :rating
-      t.references :users, null: false, foreign_key: true
+      t.integer :rating
 
       t.timestamps
     end
