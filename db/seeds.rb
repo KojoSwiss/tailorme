@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts 'Cleaning the database'
+
+Tailor.destroy_all
+User.destroy_all
+
+
+puts 'DB is clean, Seeding tailors...'
+
+10.times do
+  tailor = Tailor.new(
+    shop_name: Faker::Ancient.hero,
+    description: Faker::Restaurant.description,
+    review: Faker::Restaurant.review,
+    rating:  rand(0..5),
+    city: Faker::Address.city
+    )
+  puts "#{tailor.shop_name} done"
+  tailor.save!
+end
+puts 'Done'
+
+# puts 'Seeding Users'
+
+# user = User.new(
+#   email: 'user@example.com'
+#   password: '123456'
+#   )
+
+# puts 'Seeding complete'
