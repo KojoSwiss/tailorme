@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_14_214420) do
+ActiveRecord::Schema.define(version: 2020_12_16_200131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,37 @@ ActiveRecord::Schema.define(version: 2020_12_14_214420) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "measurements", force: :cascade do |t|
+    t.integer "bust_separation"
+    t.integer "high_bust"
+    t.integer "low_waist"
+    t.integer "bust"
+    t.integer "waist"
+    t.integer "hip"
+    t.integer "high_hip"
+    t.integer "shoulder_to_apex"
+    t.integer "shoulder_to_under_bust"
+    t.integer "shoulder_to_waist"
+    t.integer "blouse_length"
+    t.integer "shoulder_length"
+    t.integer "across_back"
+    t.integer "armhole_to_armhole"
+    t.integer "nape_to_waist"
+    t.integer "short"
+    t.integer "three_quarters"
+    t.integer "long"
+    t.integer "shoulder_to_elbow"
+    t.integer "sl_short"
+    t.integer "sl_half"
+    t.integer "sl_three_quarters"
+    t.integer "sl_long"
+    t.integer "sl_length"
+    t.integer "around_arm"
+    t.boolean "gender"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tailors", force: :cascade do |t|
