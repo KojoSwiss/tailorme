@@ -1,0 +1,7 @@
+<%= simple_form_for @tailor do |f| %>
+  <%= f.input :shop_name %>
+  <%= f.input :description %>
+  <%= f.input :review %>
+  <%= f.input :rating, collection: 1..5 %>
+  <%= f.button :submit %>
+<% end %>
