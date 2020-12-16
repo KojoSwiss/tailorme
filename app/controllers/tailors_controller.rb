@@ -10,7 +10,7 @@ class TailorsController < ApplicationController
 
   def create
     @tailor = Tailor.new(tailor_params)
-    if tailor.save
+    if @tailor.save
       redirect_to tailor_path(@tailor)
     else
       render 'new'
