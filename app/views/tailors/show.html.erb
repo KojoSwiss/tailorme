@@ -1,8 +1,60 @@
-<h1>Show page</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="show_page">
+      </div>
+      <div class="image_box">
+        <div class="big_box">
+          <%= image_tag "Socializing.png" %>
+        </div>
+        <div class="small_box">
+          <%= image_tag "Behance1.jpg" %>
+          <%= image_tag "Behance2.jpg" %>
+        </div>
+        <div class="small_box">
+          <%= image_tag "Behance1.jpg" %>
+          <%= image_tag "Behance2.jpg" %>
+        </div>
+      </div>
+      <div class="tailor-desc">
+        <h3>Description</h3>
+        <p><%= @tailor.description %></p>
+      </div>
+      <div class="tailor-toc">
+        <h2><strong>Terms and conditions</strong></h2>
+        <p>Gingerbread ice cream jelly tiramisu chocolate tootsie roll jelly. Ice cream sesame snaps lollipop halvah sweet roll gummies oat cake dragée pie. Brownie apple pie chupa chups pie pie tiramisu. Chocolate cake gummies pie jujubes sweet roll cupcake danish. Pudding bonbon sesame snaps macaroon sweet. Fruitcake tootsie roll chocolate cake toffee bear claw candy. Sweet tart biscuit tart.
+        </p>
+        <ol>
+          <li>Cash on delivery</li>
+          <li>Express Service</li>
+          <li>Contact us for more details</li>
+        </ol>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="card-tailor_contact_card">
+        <div class="card-tailor_info">
+          <h2><%= @tailor.shop_name %> </h2>
+          <h4><%= @tailor.city %> </h4>
+          <a class="btn btn-primary" href="#">Contact us </a>
+        </div>
+        <p>We specialize in the following</p>
+        <ul>
+          <li>Mens Clothing</li>
+          <li>Womens Clothing</li>
+          <p> Rating =  <%= '⭐️' * @tailor.rating %></p>
+          <h4><strong>Reviews</strong></h4>
+        </ul>
+        <div class="card-reviewer">
+          <%= image_tag "Behance1.jpg" %>
+          <p><strong>Benjie</strong>, Accra. Rating <%= @tailor.rating %></p>
+        </div>
+          <%= link_to 'Edit', edit_tailor_path, class:"btn btn-primary"  %>
+          <%= link_to "Delete", tailor_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-danger"  %>
+          <%= link_to 'Back', :back, class:"btn btn-link" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h2><%= @tailor.shop_name %></h2>
-<p><%= @tailor.description %></p>
-<p><%= link_to 'Edit', edit_tailor_path  %></p>
-<%= link_to "Delete", tailor_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-danger"  %
-<%= link_to 'Back', :back %>
 

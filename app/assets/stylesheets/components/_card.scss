@@ -35,3 +35,40 @@
 .card-product:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.card-tailor_contact_card {
+  margin: 8px;
+  border: 1px white solid;
+  background: white;
+  border-radius: 8px;
+  height: 100%vh;
+  text-align: center;
+}
+
+.card-tailor_info a {
+    width: 90%;
+    border-radius: 32px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.card-reviewer {
+  background: #F2F6F4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 90px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 8px;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+
+}
+
+.card-reviewer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 8px;
+}
