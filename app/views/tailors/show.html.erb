@@ -46,12 +46,12 @@
           <h4><strong>Reviews</strong></h4>
         </ul>
         <div class="card-reviewer">
-
+          <%= image_tag "Behance1.jpg" %>
           <p><strong>Benjie</strong>, Accra. Rating <%= @tailor.rating %></p>
+        </div>
           <%= link_to 'Edit', edit_tailor_path, class:"btn btn-primary"  %>
           <%= link_to "Delete", tailor_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-danger"  %>
           <%= link_to 'Back', :back, class:"btn btn-link" %>
-        </div>
       </div>
     </div>
   </div>
