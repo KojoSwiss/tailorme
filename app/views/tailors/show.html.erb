@@ -1,5 +1,8 @@
 <h1>Show page</h1>
 
-<main class="infinite-photo-grid"></main>
-
+<h2><%= @tailor.shop_name %></h2>
+<p><%= @tailor.description %></p>
+<p><%= link_to 'Edit', edit_tailor_path  %></p>
+<%= link_to "Delete", tailor_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-danger"  %
 <%= link_to 'Back', :back %>
+
