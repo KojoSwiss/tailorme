@@ -25,7 +25,7 @@ class TailorsController < ApplicationController
 
   def update
     if @tailor.update(tailor_params)
-      redirect_to tailors_path
+      redirect_to tailor_path(@tailor)
     else
       render 'edit'
     end
@@ -39,7 +39,7 @@ class TailorsController < ApplicationController
   private
 
   def tailor_params
-    params.require(:tailor).permit(:shop_name, :description, :review, :rating, :city)
+    params.require(:tailor).permit(:shop_name, :description, :review, :rating, :city, :photo)
   end
 
   def set_tailor

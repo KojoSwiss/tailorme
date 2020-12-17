@@ -17,6 +17,9 @@
         <li class="nav-item">
           <%= link_to "All Tailors", tailors_path, class: "nav-link" %>
         </li>
+        <li class="nav-item">
+          <%= link_to "New Tailors", new_tailor_path, class: "nav-link" %>
+        </li>
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
