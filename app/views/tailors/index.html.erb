@@ -9,9 +9,10 @@
         <div class="card-product-infos">
           <h2><strong><%= tailor.shop_name %></strong></h2>
           <p><%= tailor.id %></p>
-          <p><%= truncate(tailor.description, length:50) %></p>
+          <p><%= truncate(tailor.description, length:100) %></p>
           <p><%= tailor.rating %></p>
-          <p> <%= tailor.review %></p>
+          <p><%= truncate(tailor.review, length:50) %></p>
+
           <%= link_to 'more', tailor %>
         </div>
       </div>

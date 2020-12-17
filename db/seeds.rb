@@ -12,7 +12,7 @@ puts 'DB is clean, Seeding tailors...'
     description: Faker::Restaurant.description,
     review: Faker::Restaurant.review,
     rating:  rand(1..5),
-    address: Faker::Address.full_address
+    address: Faker::Address.city
     )
   puts "#{tailor.shop_name} done"
   tailor.save!
