@@ -4,17 +4,13 @@
       <div class="show_page">
       </div>
       <div class="image_box">
-        <div class="big_box">
-          <%= image_tag "Socializing.png" %>
-        </div>
-        <div class="small_box">
-          <%= image_tag "Behance1.jpg" %>
-          <%= image_tag "Behance2.jpg" %>
-        </div>
-        <div class="small_box">
-          <%= image_tag "Behance1.jpg" %>
-          <%= image_tag "Behance2.jpg" %>
-        </div>
+          <% @tailor.photos.each do |photo| %>
+          <ul>
+            <li>
+              <%= cl_image_tag photo.key %>
+            </li>
+          </ul>
+          <% end %>
       </div>
       <div class="tailor-desc">
         <h3>Description</h3>

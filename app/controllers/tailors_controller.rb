@@ -39,7 +39,7 @@ class TailorsController < ApplicationController
   private
 
   def tailor_params
-    params.require(:tailor).permit(:shop_name, :description, :review, :rating, :city, :photo)
+    params.require(:tailor).permit(:shop_name, :description, :review, :rating, :city, photos: [])
   end
 
   def set_tailor
