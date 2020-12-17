@@ -2,6 +2,12 @@ class TailorsController < ApplicationController
   before_action :set_tailor, only:[:show, :edit, :update, :destroy]
   def index
     @tailors = Tailor.all
+    @markers = @flats.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def new
