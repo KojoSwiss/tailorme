@@ -3,5 +3,6 @@
   <%= f.input :description %>
   <%= f.input :review %>
   <%= f.input :rating, collection: 1..5 %>
-  <%= f.button :submit %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class:"btn btn-secondary" %>
 <% end %>
