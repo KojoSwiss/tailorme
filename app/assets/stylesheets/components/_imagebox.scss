@@ -2,8 +2,15 @@
   display: flex;
   background: F2F6F4;
   margin: 4px;
-  width: 400px;
-  justify-content: space-around
+  width: 500px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.image_box ul {
+  list-style-type: none;
+  margin: 8px;
+  padding: 0;
 }
 
 .image_box img {
@@ -15,16 +22,16 @@
 .big_box img {
   height: 100%;
   width: 170px;
-  padding: 8px;
+  padding: 2px;
   object-fit: cover;
 }
 
-.small_box {
-  width: 100px;
-}
+// .small_box {
+//   width: 100px;
+// }
 
-.small_box img {
-  height: 100px;
-  width: 120px;
-  padding: 4px 16px;
-}
+// .small_box img {
+//   height: 100px;
+//   width: 120px;
+//   padding: 4px 16px;
+// }
