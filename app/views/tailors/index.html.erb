@@ -8,14 +8,21 @@
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos">
           <h2><strong><%= tailor.shop_name %></strong></h2>
-          <p><%= tailor.id %></p>
-          <p><%= truncate(tailor.description, length:50) %></p>
-          <p><%= tailor.rating %></p>
-          <p> <%= tailor.review %></p>
+          <p><%= tailor.address %></p>
+          <p><%= truncate(tailor.description, length:100) %></p>
+          <p><%= '⭐️' * tailor.rating %></p>
+          <p><%= truncate(tailor.review, length:50) %></p>
+
           <%= link_to 'more', tailor %>
         </div>
       </div>
       <% end %>
+    </div>
+    <div class="col-md-6">
+      <div id="map"
+        style="width: 100%; height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
   </div>
 </div>

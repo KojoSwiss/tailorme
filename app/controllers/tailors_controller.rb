@@ -2,6 +2,14 @@ class TailorsController < ApplicationController
   before_action :set_tailor, only:[:show, :edit, :update, :destroy]
   def index
     @tailors = Tailor.all
+
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @tailors.geocoded.map do |tailor|
+      {
+        lat: tailor.latitude,
+        lng: tailor.longitude
+      }
+    end
   end
 
   def new
@@ -39,7 +47,7 @@ class TailorsController < ApplicationController
   private
 
   def tailor_params
-    params.require(:tailor).permit(:shop_name, :description, :review, :rating, :city, photos: [])
+    params.require(:tailor).permit(:shop_name, :description, :review, :rating, :address, photos: [])
   end
 
   def set_tailor

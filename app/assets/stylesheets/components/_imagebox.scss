@@ -5,6 +5,8 @@
   width: 500px;
   justify-content: space-around;
   flex-wrap: wrap;
+  background: white;
+  border-radius: 8px;
 }
 
 .image_box ul {
@@ -35,3 +37,15 @@
 //   width: 120px;
 //   padding: 4px 16px;
 // }
+
+@media(max-width: 992px) {
+  .image_box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .image_box {
+    grid-template-columns: 1fr;
+  }
+}
