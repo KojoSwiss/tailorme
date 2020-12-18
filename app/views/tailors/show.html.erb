@@ -38,7 +38,7 @@
         <ul>
           <li>Mens Clothing</li>
           <li>Womens Clothing</li>
-          <p> Rating =  <%= '⭐️' * @tailor.rating %></p>
+          <p> Rating <%= '⭐️' * @tailor.rating %></p>
           <h4><strong>Reviews</strong></h4>
         </ul>
         <div class="card-reviewer">
@@ -52,5 +52,18 @@
     </div>
   </div>
 </div>
+<section class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="rating_category">
+        <%= '⭐️' * @tailor.rating %> <strong>Reviews</strong>
+        <div class="rating_category">
+          <p>Delivery on time</p>
+          <p><%= '😉' * 3 %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 

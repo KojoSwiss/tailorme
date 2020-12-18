@@ -7,7 +7,9 @@ class TailorsController < ApplicationController
     @markers = @tailors.geocoded.map do |tailor|
       {
         lat: tailor.latitude,
-        lng: tailor.longitude
+        lng: tailor.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { tailor: tailor }),
+        image_url: helpers.asset_url('logo.png')
       }
     end
   end

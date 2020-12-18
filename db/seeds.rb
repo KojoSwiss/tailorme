@@ -1,7 +1,10 @@
+require "open-uri"
 puts 'Cleaning the database'
 
 Tailor.destroy_all
 User.destroy_all
+
+cities = ['Zurich', 'London', 'Paris']
 
 
 puts 'DB is clean, Seeding tailors...'
@@ -12,8 +15,12 @@ puts 'DB is clean, Seeding tailors...'
     description: Faker::Restaurant.description,
     review: Faker::Restaurant.review,
     rating:  rand(1..5),
-    address: Faker::Address.city
+    address: cities.sample
+
     )
+    file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
+    tailor.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
   puts "#{tailor.shop_name} done"
   tailor.save!
 end
