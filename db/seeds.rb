@@ -4,7 +4,7 @@ puts 'Cleaning the database'
 Tailor.destroy_all
 User.destroy_all
 
-cities = ['Zurich', 'London', 'Paris']
+cities = ['Zurich', 'London', 'Paris', 'Bern', 'Vienna', 'Nice', 'Milan']
 
 
 puts 'DB is clean, Seeding tailors...'
