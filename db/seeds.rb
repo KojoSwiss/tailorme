@@ -7,8 +7,9 @@ Tailor.destroy_all
 cities = ['Zurich', 'London', 'Paris', 'Bern', 'Vienna', 'Nice', 'Milan', 'Nancy', 'Jena', 'Cologne']
 
 images = ['https://miro.medium.com/max/8160/1*g2rWkmY0VEjFLNmDGwZakg.jpeg',
-          'https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png',
+          'https://miro.medium.com/max/1030/1*bMmMv9en0Qyik9mLfWFKTw.jpeg',
           'https://www.macleans.ca/wp-content/uploads/2014/09/MAC36_WOMENS_CLOTHES_POST.jpg',
+          'https://imgmedia.lbb.in/media/2018/07/5b4466ee235c4e012db6c3fe_1531209454277.jpg',
           'https://static.dw.com/image/51539939_401.jpg']
 
 
