@@ -63,7 +63,6 @@
   margin-left: 0;
   display: flex;
   align-items: center;
-
 }
 
 .card-reviewer img {
@@ -74,6 +73,17 @@
 }
 
 .rating_category {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8p;
+  margin-top: 8px;
+  align-content: center;
+  background: ghostwhite;
+  padding: 16px;
+  align-items: center;
+  border-radius: 16px;
+  align-items: center;
+  align-content: center;
   display: flex;
   background: white;
   margin-bottom: 4px;
