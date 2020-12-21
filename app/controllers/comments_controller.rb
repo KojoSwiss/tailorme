@@ -4,13 +4,17 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @tailor = Post.find(params[:tailor_id])
-    @comment = Comment.new(params.require(:comment).permit(:body))
-    @comment.tailor = @comment
-    if @comment.save
-      redirect_to tailor_path(@tailor)
-    else
-      render 'new'
-    end
+    @tailor = Tailor.find(params[:tailor_id])
+    @comment = @tailor.comments.create(params[:comment].permit(:body))
+
+    redirect_to tailor_path(@tailor)
+  end
+
+  def destroy
+    @tailor = Tailor.find(params[:tailor_id])
+    @comment = @tailor.comments.find(params[:id])
+    @comment.destroy
+
+    redirect_to tailor_path(@tailor)
   end
 end

@@ -1,6 +1,4 @@
-<div class="form-control">
-  <%= simple_form_for [@tailor, @comment] do |f| %>
-    <%= f.input :body %>
-    <%= f.button :submit %>
-  <% end %>
-</div>
+<%= simple_form_for [@tailor, @comment] do |f| %>
+  <%= f.input :body %>
+  <%= f.button :submit, class:"btn btn-primary" %>
+<% end %>
