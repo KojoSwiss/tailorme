@@ -26,12 +26,19 @@
     </a>
     </div>
 </div> -->
-<div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'Behance5.jpg'%>);">
+  <div class="container">
+    <h1>Find a Tailor | <strong> Based on Reviews</strong>!</h1>
+     <p> No more disappointments, pick a tailor you can trust 😉</p>
+    <%= link_to 'Get Started', tailors_path, class: 'btn btn-success'  %>
+  </div>
+</div>
+<!-- <div class="container">
   <div class="row">
     <div class="col-md-6">
       <div class="get-started">
         <h1> Find a tailor for you</h1>
-        <p> No more disappointments, pick a tailor from the reviews and ratings. 😉</p>
+        <p> No more disappointments, pick a tailor you can trust 😉</p>
         <%= link_to 'Get Started', tailors_path, class: 'btn btn-success'  %>
       </div>
     </div>
@@ -39,6 +46,6 @@
       <%= image_tag "Socializing.png"%>
     </div>
   </div>
-</div>
+</div> -->
 
 
