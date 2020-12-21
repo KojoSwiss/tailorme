@@ -53,53 +53,60 @@
   </div>
 </div>
 <section class="container">
+  <div class="rating">
+    <%= '⭐️' * @tailor.rating %> <strong>Reviews</strong>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="rating_category">
+        <p>Category</p>
+        <p>xxxxxxxxxx</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="rating_category">
+        <p>Category</p>
+        <p>xxxxxxxxxx</p>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-12">
       <div class="rating">
         <%= '⭐️' * @tailor.rating %> <strong>Reviews</strong>
+    <div class="col-md-4">
+      <div class="rating_category">
+        <p>Category</p>
+        <p>xxxxxxxxxx</p>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="rating_category">
-              <p>Delivery on time</p>
-              <p><%= '😉' * 3 %></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="rating_category">
-              <p>Friendly</p>
-              <p><%= '♥️' * 5 %></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="rating_category">
-              <p>Accuracy</p>
-              <p><%= '✂' * 4 %></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="rating_category">
-              <p>Price</p>
-              <p><%= '💰' * 5 %></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="rating_category">
-              <p>Time</p>
-              <p><%= '🕰' * 3 %></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="rating_category">
-              <p>Overall</p>
-              <p><%= '😍' * 5 %></p>
-            </div>
-          </div>
+    </div>
+    <div class="col-md-4">
+      <div class="rating_category">
+        <p>Category</p>
+        <p>xxxxxxxxxx</p>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-8 justify-content-left">
+    <div class="col-md-10 mb-4 mt-4">
+      <div class="card-reviews">
+        <%= image_tag 'avator-male-md.png' %>
+        <div class="card-reviewer-name">
+          <p><Strong>Lorena Abena</Strong></p>
+          <p>20/12/2010</p>
+        <div class="card-reviewer-info">
+          <p>lLorem ipsum dolor sit amet, consectetur adipiscing elit,
+            Ut . Excepteur sint ocent, sunt in culpa qui offic... <strong>Read more ....</strong></p>
+        </div>
         </div>
       </div>
     </div>
   </div>
+  <%= link_to 'Read all reviews', '#', class:"btn btn btn-primary mt-8" %>
+  <h2><%= @tailor.comments.count %> Comments</h2>
+  <%= render @tailor.comments %>
+  <h3> write a comment:</h3>
+  <%= render 'comments/form'%>
 </section>
 
 

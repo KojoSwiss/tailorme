@@ -2,9 +2,15 @@ require "open-uri"
 puts 'Cleaning the database'
 
 Tailor.destroy_all
-User.destroy_all
 
-cities = ['Zurich', 'London', 'Paris']
+
+cities = ['Zurich', 'London', 'Paris', 'Bern', 'Vienna', 'Nice', 'Milan', 'Nancy', 'Jena', 'Cologne']
+
+images = ['https://miro.medium.com/max/8160/1*g2rWkmY0VEjFLNmDGwZakg.jpeg',
+          'https://miro.medium.com/max/1030/1*bMmMv9en0Qyik9mLfWFKTw.jpeg',
+          'https://www.macleans.ca/wp-content/uploads/2014/09/MAC36_WOMENS_CLOTHES_POST.jpg',
+          'https://imgmedia.lbb.in/media/2018/07/5b4466ee235c4e012db6c3fe_1531209454277.jpg',
+          'https://static.dw.com/image/51539939_401.jpg']
 
 
 puts 'DB is clean, Seeding tailors...'
@@ -18,7 +24,7 @@ puts 'DB is clean, Seeding tailors...'
     address: cities.sample
 
     )
-    file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
+    file = URI.open(images.sample)
     tailor.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
   puts "#{tailor.shop_name} done"
