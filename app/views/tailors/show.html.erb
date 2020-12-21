@@ -98,9 +98,12 @@
         </div>
       </div>
     </div>
-
   </div>
   <%= link_to 'Read all reviews', '#', class:"btn btn btn-primary mt-8" %>
+  <h2><%= @tailor.comments.count %> Comments</h2>
+  <%= render @tailor.comments %>
+  <h3> write a comment:</h3>
+  <%= render 'comments/form'%>
 </section>
 
 
